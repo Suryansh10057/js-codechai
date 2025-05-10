@@ -1,2 +1,2 @@
 # js-codechai
-A ciode repo for js series
+A code repo for js series
