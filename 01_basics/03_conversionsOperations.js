@@ -18,3 +18,50 @@ let valueInNum5=Number(score5)
 // console.table([Boolean(""),Boolean("abc")])
 
 let num_to_str=String(33)
+
+/// **************** Operations *****************************//////
+/*
+let value=3
+let negval=-value
+console.log(negval)
+
+let str1= "hel"
+let str2="lo"
+let str3=str1+str2
+console.log(str3)
+
+console.log("1"+2)  // 12
+console.log(1+"2")  // 12
+console.log("1"+"2") //12
+console.log("1"+2+2) //122
+console.log(1+2+"2") //32
+
+*/
+console.log(3+4*5%3)
+
+console.log(true)
+console.log(+true) // =1
+// console.log(true+)    //=>error
+
+console.log(+"")
+
+let num1,num2,num3
+num1=num2=num3=2
+
+let counter=100;
+console.log(counter++)
+console.log(++counter)
+
+
+
+//***********Comparision ************//
+console.log("2">1)
+console.log("02">1)  //however typescript doesnot allow to compare dissimilar datatype
+console.log(null>0)
+console.log(null==0)
+console.log(null>=0) //true as comparison converts null to a number(0)
+
+console.table([undefined>0,undefined==0,undefined>=0])
+
+/////////Strict check -- check values as well as datatype
+console.log("2"===2)
