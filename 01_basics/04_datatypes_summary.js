@@ -42,4 +42,4 @@ const myFunction=function(){
     console.log("Hello World");
 }
 
-console.log(typeof )
+console.table([typeof myFunction,typeof id,typeof myObj,typeof heroes])  // object function 
