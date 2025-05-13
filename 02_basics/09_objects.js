@@ -58,7 +58,7 @@ jsuser.greeting2()
 /////////////////// Part 2 //////////////////////
 ///////////Singleton- made by constructor
 
-// /*
+/*
 // const user=new Object()  ///singleton object
 const user={}            /// non-singleton
 // console.log(user)
@@ -82,7 +82,7 @@ const reguser={
         }
     }
 }
-/*
+
 console.log(reguser)
 console.log(reguser.fullname)
 console.log(reguser.fullname.designation)
@@ -90,7 +90,7 @@ console.log(reguser.fullname.userfullname.firstname)
 
 console.log(reguser.full?.userfullname.firstname) // prints only when available else undefined
 
-*/
+
 
 //////Merging objects
 
@@ -132,3 +132,42 @@ console.log(Object.entries(user))
 console.log(user.hasOwnProperty('isLoggedin'))
 console.log(user.hasOwnProperty('isLogged'))
 
+*/
+
+
+//////////Object destructure
+
+const course={
+    coursename:"js in hindi",
+    price:"999",
+    courseInstructor:"hitesh"
+}
+
+/////// course.courseInstructor  -- printing ways
+
+const{courseInstructor:instructor}=course
+
+// console.log(courseInstructor)
+console.log(instructor)
+
+
+
+//////////////////////////////API /////////////////
+// APi values comes in json.....javascript object notation
+
+// {
+//     "name":"hitesh",
+//     "coursename":"js in hindi",
+//     "price":"free"
+// }
+
+/// json as arrays
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
+
+
+/////////////use json formatter to see clearly
