@@ -28,4 +28,33 @@ function one(){
 
 }
 
-one()
+// one()
+
+
+if (true) {
+    const username = "hitesh"
+    if (username === "hitesh") {
+        const website = " youtube"
+        console.log(username + website);
+    }
+    // console.log(website);
+}
+
+// console.log(username);
+
+
+
+// ++++++++++++++++++ interesting ++++++++++++++++++
+
+
+console.log(addone(5))   //this will work
+
+function addone(num){
+    return num + 1
+}
+
+
+addTwo(5)   // hosting here we make functionas varaible so it will thro error as accessing it before declaration
+const addTwo = function(num){
+    return num + 2
+}
