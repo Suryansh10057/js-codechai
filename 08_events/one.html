@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Events</title>
+</head>
+<body style="background: color #414141; color:rgb(34, 97, 152);">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: blue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // // instead of writign alert in css write it here but not apply same for react
+    // document.getElementById('owl').onclick=function(){
+    //     alert("Sahil is there")
+    // }
+
+    // // attachEvent()
+    // // jQuery-on 
+    // /////////to study
+    // //type,timestamp,defaultPrevented
+    // //target,toElement,srcElement,currentTarget
+    // //clientX,clientY,screenx,screenY
+    // //altkey,ctrlkey,shiftkey,keyCode
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     alert("owl clicked inside ul")
+    //     console.log(e)
+    // },false)   //work when you clicked inside images(ul)
+
+    //  document.getElementById('owl').addEventListener('click',function(e){
+    //     alert("owl clicked")
+    //     console.log(e)
+    //     e.stopPropagation()  // then  bubbling will not occur
+    // },false)   //when you cliked on owl
+
+
+    // //Inside to outside=> when it will be false then events will bubbling up first "owl clicked " prints then other but
+    // //Outside to inside=> when true the "owl clicked inside ul" will clicked then other
+    
+
+    // document.getElementById("google").addEventListener('click',function(e){
+    //     e.defaultPrevented()
+    //     e.stopPropagation()
+    //     console.log("google clicked")
+    // },false)
+  
+    document.querySelector('#images').addEventListener('click',function(e){
+    //    console.log(e)
+    //    console.log(e.target)
+    //    console.log(e.target.parentNode)
+       let removeIt=e.target.parentNode
+    //    removeIt.remove()
+    ///////////or
+    if(e.target.tagName==='IMG')
+    removeIt.parentNode.removeChild(removeIt)
+    },false)
+    
+
+    //////but it will remove everything if we click on google as the parent is the entire ul
+    // so search by the tagname then apply if else 
+ 
+</script>
+</html>
