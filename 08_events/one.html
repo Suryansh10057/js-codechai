@@ -26,7 +26,9 @@
 
     // // attachEvent()
     // // jQuery-on 
-    // /////////to study
+
+    ////////////////////////////////////////////to study
+    
     // //type,timestamp,defaultPrevented
     // //target,toElement,srcElement,currentTarget
     // //clientX,clientY,screenx,screenY
@@ -54,16 +56,16 @@
     //     console.log("google clicked")
     // },false)
   
-    document.querySelector('#images').addEventListener('click',function(e){
-    //    console.log(e)
-    //    console.log(e.target)
-    //    console.log(e.target.parentNode)
-       let removeIt=e.target.parentNode
-    //    removeIt.remove()
-    ///////////or
-    if(e.target.tagName==='IMG')
-    removeIt.parentNode.removeChild(removeIt)
-    },false)
+    // document.querySelector('#images').addEventListener('click',function(e){
+    // //    console.log(e)
+    // //    console.log(e.target)
+    // //    console.log(e.target.parentNode)
+    //    let removeIt=e.target.parentNode
+    // //    removeIt.remove()
+    // ///////////or
+    // if(e.target.tagName==='IMG')
+    // removeIt.parentNode.removeChild(removeIt)
+    // },false)
     
 
     //////but it will remove everything if we click on google as the parent is the entire ul
